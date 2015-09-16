@@ -2,6 +2,19 @@
 a {text-decoration: none;color: #fff;}
 body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 
+@font-face {
+	font-family: 'eurostileregular';
+	src: url('eurostile-webfont.eot');
+	src: url('eurostile-webfont.eot?#iefix') format('embedded-opentype'),
+	url('eurostile-webfont.woff2') format('woff2'),
+	url('eurostile-webfont.woff') format('woff'),
+	url('eurostile-webfont.ttf') format('truetype'),
+	url('eurostile-webfont.svg#eurostileregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
 /********************************************************************************************************************************************************* DISPLAY NONE COLLECTION */
 
 /********************************************************************************************************************************************************* INSERT CLASSES  {display: none;} */
