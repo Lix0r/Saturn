@@ -1,13 +1,46 @@
-/* BASIC CLASSES */
 * {padding: 0px;margin: 0px;font-family: 'eurostileregular';}
 a {text-decoration: none;color: #fff;}
 body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 
-/* DISPLAY NONE COLLECTION */
+/********************************************************************************************************************************************************* DISPLAY NONE COLLECTION */
 
-.size_3,.navbar_search_button_icon_resp1240,.navbar_search_button_icon_resp1080,.bottom_bar_wrapper,.marketplace_search  {display: none;}
+/********************************************************************************************************************************************************* INSERT CLASSES  {display: none;} */
 
-/* COLLECTION END */
+/********************************************************************************************************************************************************* COLLECTION END **********/
+
+/********************************************************************************************************************************************************* BASIC CLASSES ***********/
+
+/********************************************************************************************************************************************************* POSITIONING *************/
+
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+.align_left {
+	text-align: left;
+}
+
+.align_right {
+	text-align: right;
+}
+
+.align_center {
+	text-align: center;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+/********************************************************************************************************************************************************* COLORS ******************/
 
 .black {
 	background-color: #20201f;
@@ -65,13 +98,7 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	transition: background 0.0s ease;
 }
 
-.float_left {
-	float: left;
-}
-
-.float_right {
-	float: right;
-}
+/********************************************************************************************************************************************************* STYLES ******************/
 
 .text_input {
 	border: none;
@@ -83,18 +110,6 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	box-shadow: 0 0 5px 0 rgba(000,000,000,0.4);
 }
 
-.align_left {
-	text-align: left;
-}
-
-.align_right {
-	text-align: right;
-}
-
-.align_center {
-	text-align: center;
-}
-
 .no_overflow {
 	overflow: hidden;
 }
@@ -103,14 +118,90 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	list-style: none;
 }
 
-.position_relative {
-	position: relative;
+/********************************************************************************************************************************************************* CORNERS *****************/
+
+/********************************************************************************************************************************************************* MAIN ********************/
+
+.special_corner {
+	width: 18px;
+	height: 45px;
+	position: absolute;
+	overflow: hidden;
 }
 
-/* BASIC CLASSES END */
+.special_corner_rotated {
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	content: "";
+}
+
+/****************************************************************************************************************************************************** INDIVIDUAL ADJUSTMENTS *****/
+
+.special_corner_additional_navbar_adj_left {
+	top: -12px;
+	left: -18px;
+}
+
+.special_corner_additional_navbar_adj_right {
+	top: -12px;
+}
+
+.special_corner_userpanel_login {
+	right: 0px;
+}
+
+/********************************************************************************************************************************************************* BOTTOM LEFT *************/
+
+.special_corner_bottom_left {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	content: "";
+}
+.special_corner_bottom_left_rotated {
+	top: 13px;
+	left: 5px;
+}
+
+/********************************************************************************************************************************************************* BOTTOM RIGHT ************/
+
+.special_corner_bottom_right {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	content: "";
+}
+.special_corner_bottom_right_rotated {
+	top: 13px;
+	left: -13px;
+}
+
+/********************************************************************************************************************************************************* TOP RIGHT ***************/
+
+.special_corner_top_right {
+	width: 25px;
+	height: 27px;
+	position: absolute;
+	content: "";
+	top: 18px;
+	background-color: inherit;
+}
+.special_corner_top_right_rotated {
+	top: 5px;
+	left: -12px;
+	background-color: inherit;
+}
+
+/********************************************************************************************************************************************************* BASIC CLASSES END *******/
 
 
-/* TOP BAR STARTS */
+/********************************************************************************************************************************************************* TOP BAR STARTS **********/
 
 #navigation {
 	position: fixed;
@@ -125,6 +216,14 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	left: 50px;
 }
 
+.nav_search_container {
+	position: relative;
+	width: 461px;
+	height: 45px;
+	top: 26px;
+	left: 151px;
+}
+
 .nav_input {
 	position: relative;
 	height: 45px;
@@ -137,19 +236,6 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 
 .nav_input:focus {
 	color: #000;
-}
-
-.additional_tabs {
-	position: relative;
-	top: 42px;
-	left: 2.6%;
-	width: 30%;
-}
-
-.additional_tab {
-	margin-left: 8%;
-	font-size: 16px;
-	text-transform: uppercase;
 }
 
 .navbar_search_button_container {
@@ -186,14 +272,6 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	pointer-events: none;
 }
 
-.nav_search_container {
-	position: relative;
-	width: 461px;
-	height: 45px;
-	top: 26px;
-	left: 151px;
-}
-
 .navbar_search_button_overlay {
 	width: 50px;
 	height: 50px;
@@ -208,181 +286,22 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	transform: rotate(45deg);
 }
 
-/* TOP BAR ENDS */
+.additional_tabs {
+	position: relative;
+	top: 42px;
+	left: 2.6%;
+	width: 30%;
+}
 
-/***************************************************************************************ADDITIONAL BAR STARTS */
-
-.additional_navbar {
-	position: fixed;
-	z-index: 5;
-	top: 95px;
-	height: 31px;
-	width: 315px;
-	padding-left: 50px;
-	padding-top: 9px;
+.additional_tab {
+	margin-left: 8%;
 	font-size: 16px;
+	text-transform: uppercase;
 }
 
-.additional_navbar_right {
-	position: fixed;
-	z-index: 4;
-	top: 95px;
-	height: 31px;
-	padding-left: 0px;
-	padding-top: 9px;
-	padding-right: 0px;
-	font-size: 16px;
-	right: 66px;
-}
+/********************************************************************************************************************************************************* TOP BAR ENDS ************/
 
-.additional_navbar_text {
-	position: relative;
-	left: 6px;
-	top: 3px;
-}
-
-.additional_navbar_text_right {
-	position: relative;
-	margin-left: 24px;
-	top: 3px;
-}
-
-.additional_navbar_text_right_first_item {
-	margin-left: 0px;
-}
-
-.corner_left {
-	left: 358px;
-	top: 92px;
-}
-
-.additional_nav_input {
-	height: 25px;
-	position: relative;
-	width: 116px;
-	color: #a7a7a7;
-	padding-right: 45px;
-	padding-left: 5px;
-	left: 12px;
-	top: -1px;
-}
-
-.additional_nav_input:focus {
-	color: #000;
-}
-
-.additional_nav_search_container {
-	position: relative;
-	height: 25px;
-	top: -1px;
-	left: -28px;
-}
-
-.additional_navbar_search_button_overlay {
-	width: 50px;
-	height: 50px;
-	position: relative;
-	content: "";
-	top: -13px;
-	left: -48px;
-	-moz-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-.additional_nav_search {
-	border: none;
-	position: relative;
-	display: inline-block;
-	padding: 3px 6px 5px 12px;
-	border-radius: 0px 2px 2px 0px;
-}
-
-/* CORNERS */
-
-	/* MAIN */
-
-	.special_corner {
-		width: 18px;
-		height: 45px;
-		position: absolute;
-		overflow: hidden;
-	}
-
-	.special_corner_rotated {
-		-moz-transform: rotate(45deg);
-		-webkit-transform: rotate(45deg);
-		-o-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
-		transform: rotate(45deg);
-		position: absolute;
-		width: 25px;
-		height: 25px;
-		content: "";
-	}
-
-	/* INDIVIDUAL ADJUSTMENTS */
-
-	.special_corner_additional_navbar_adj_left {
-		top: -12px;
-		left: -18px;
-	}
-	
-	.special_corner_additional_navbar_adj_right {
-		top: -12px;
-	}
-
-	.special_corner_userpanel_login {
-		right: 0px;
-	}
-
-	/* BOTTOM LEFT */
-
-	.special_corner_bottom_left {
-		width: 25px;
-		height: 25px;
-		position: absolute;
-		content: "";
-	}
-	.special_corner_bottom_left_rotated {
-		top: 13px;
-		left: 5px;
-	}
-
-	/* BOTTOM RIGHT */
-
-	.special_corner_bottom_right {
-		width: 25px;
-		height: 25px;
-		position: absolute;
-		content: "";
-	}
-	.special_corner_bottom_right_rotated {
-		top: 13px;
-		left: -13px;
-	}
-
-	/* TOP RIGHT */
-
-	.special_corner_top_right {
-		width: 25px;
-		height: 27px;
-		position: absolute;
-		content: "";
-		top: 18px;
-		background-color: inherit;
-	}
-	.special_corner_top_right_rotated {
-		top: 5px;
-		left: -12px;
-		background-color: inherit;
-	}
-
-/* ADDITIONAL BAR ENDS */
-
-/* USER PANEL STARTS */
+/********************************************************************************************************************************************************* USER PANEL STARTS *******/
 
 .userpanel_container {
 	right: 50px;
@@ -390,29 +309,6 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	position: fixed;
 	z-index: 6;
 	overflow: visible;
-}
-
-.userpanel_shopping_cart {
-	position: relative;
-	height: 45px;
-	right: 26px;
-	width: 255px;
-	background-image: url(../img/userpanel_shopping_cart.png);
-	background-repeat: no-repeat;
-}
-
-.userpanel_shopping_cart_icon {
-	position: relative;
-	top: 9px;
-	right: 12px;
-}
-
-.userpanel_shopping_cart_label {
-	position: relative;
-	color: #fff;
-	font-size: 18px;
-	top: 13px;
-	right: 20px;
 }
 
 .userpanel_login_container {
@@ -508,9 +404,119 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	top: 122px;
 }
 
-/* USER PANEL ENDS */
+.userpanel_shopping_cart {
+	position: relative;
+	height: 45px;
+	right: 26px;
+	width: 255px;
+	background-image: url(../img/userpanel_shopping_cart.png);
+	background-repeat: no-repeat;
+}
 
-/* SIDE BAR STARTS */
+.userpanel_shopping_cart_icon {
+	position: relative;
+	top: 9px;
+	right: 12px;
+}
+
+.userpanel_shopping_cart_label {
+	position: relative;
+	color: #fff;
+	font-size: 18px;
+	top: 13px;
+	right: 20px;
+}
+
+/********************************************************************************************************************************************************* USER PANEL ENDS *********/
+
+/********************************************************************************************************************************************************* ADDITIONAL BAR STARTS ***/
+
+.additional_navbar {
+	position: fixed;
+	z-index: 5;
+	top: 95px;
+	height: 31px;
+	width: 315px;
+	padding-left: 50px;
+	padding-top: 9px;
+	font-size: 16px;
+}
+
+.additional_navbar_text {
+	position: relative;
+	left: 6px;
+	top: 3px;
+}
+
+.additional_nav_input {
+	height: 25px;
+	position: relative;
+	width: 116px;
+	color: #a7a7a7;
+	padding-right: 45px;
+	padding-left: 5px;
+	left: 12px;
+	top: -1px;
+}
+
+.additional_nav_input:focus {
+	color: #000;
+}
+
+.additional_nav_search_container {
+	position: relative;
+	height: 25px;
+	top: -1px;
+	left: -28px;
+}
+
+.additional_nav_search {
+	border: none;
+	position: relative;
+	display: inline-block;
+	padding: 3px 6px 5px 12px;
+	border-radius: 0px 2px 2px 0px;
+}
+
+.additional_navbar_search_button_overlay {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	content: "";
+	top: -13px;
+	left: -48px;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.additional_navbar_right {
+	position: fixed;
+	z-index: 4;
+	top: 95px;
+	height: 31px;
+	padding-left: 0px;
+	padding-top: 9px;
+	padding-right: 0px;
+	font-size: 16px;
+	right: 66px;
+}
+
+.additional_navbar_text_right {
+	position: relative;
+	margin-left: 24px;
+	top: 3px;
+}
+
+.additional_navbar_text_right_first_item {
+	margin-left: 0px;
+}
+
+/********************************************************************************************************************************************************* ADDITIONAL BAR ENDS *****/
+
+/********************************************************************************************************************************************************* SIDE BAR STARTS *********/
 
 #sidebar {
 	position: fixed;
@@ -527,8 +533,11 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	transition: all 0.5s ease;
 }
 
-.sidebar {
-	position: relative;
+.sidebar_text {
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar_tab {
@@ -569,13 +578,6 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	transition: opacity 0s ease;
 }
 
-.sidebar_text {
-	font-size: 18px;
-	color: rgb(255, 255, 255);
-	text-transform: uppercase;
-	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-}
-
 .tab_content {
 	color: #fff;
 	position: absolute;
@@ -602,7 +604,7 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	top: -1px;
 }
 
-/* SIDE BAR ENDS */
+/********************************************************************************************************************************************************* SIDE BAR ENDS ***********/
 
 #content {
 	width: 1447px;
@@ -622,345 +624,130 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	left: 18px;
 }
 
-@media (max-width: 1919px) {
+/********************************************************************************************************************************************************* RESPONSIVE START ********/
 
-	.userpanel_login {
-		width: 69px;
-		background-position: -186px 0;
-	}
+/********************************************************************************************************************************************************* PHONES ******************/
 
-	.userpanel_login span {
-		display: none;
-	}
+/********************************************************************************************************************************************************* iPhone 4(S) and S3 ******/
 
-	.tab_text {
-			 display: none;
-		 }
-
-	.tab_arrow {
-		left: 76px;
-	}
-
-	.tab_icon {
-		width: 58px;
-	}
-
-	#sidebar, .sidebar_tab, .sidebar_tab_transition {
-		width: 114px;
-	}
-
-	#content {
-		left: 124px;
-	}
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 
 }
 
-@media (max-width: 1679px) {
-	.userpanel_shopping_cart {
-		width: 69px;
-	}
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
 
-	.userpanel_shopping_cart span {
-		display: none;
-	}
 }
 
-@media (max-width: 1419px) {
-	/* TOP BAR */
-	.logo {
-		left: 100px;
-	}
+/********************************************************************************************************************************************************* iPhone 5 and 5S *********/
 
-	.additional_navbar {
-		display: none;
-	}
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 
-	.size_3 {
-		display: list-item;
-	}
-	.additional_tabs {
-		display: none;
-	}
-
-	.nav_input {
-		width: 459px;
-	}
-
-	.nav_search_container {
-		width: 661px;
-	}
-
-	.sidebar_button {
-		position: absolute;
-		top: 21px;
-		left: 21px;
-		overflow: hidden;
-		width: 60px;
-		height: 50px;
-		border: 0;
-		padding: 0;
-		cursor: pointer;
-	}
-
-	.sidebar_button_inner {
-		width: auto;
-		margin-top: 10px;
-		height: 10px;
-		background-color: #ffffff;
-		border: solid #20201F;
-		border-bottom-width: 10px;
-		border-top-width: 10px;
-		border-left-width: 0px;
-		border-right-width: 0px;
-		content: "";
-		-webkit-box-shadow: 0 0 0 10px rgba(255,255,255,1);
-		box-shadow: 0 0 0 10px rgba(255,255,255,1);
-	}
-
-	/* SIDEBAR */
-	
-	#sidebar {
-		left: -374px;
-	}
-	
-	.sidebar {
-		top: 30px;
-	}
-	
-	.sidebar_active {
-		left: 0px !important;
-	}
-
-	.tab_text {
-		display: inline-block;
-	}
-
-	.tab_arrow {
-		left: 346px;
-	}
-
-	.tab_icon {
-		width: 78px;
-	}
-
-	#sidebar, .sidebar_tab, .sidebar_tab_transition {
-		width: 374px;
-	}
-
-	#sidebar_overlay {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		background-color: #000;
-		opacity: 0;
-		z-index: -5;
-		-webkit-transition: opacity 0.5s ease;
-		-moz-transition: opacity 0.5s ease;
-		-ms-transition: opacity 0.5s ease;
-		-o-transition: opacity 0.5s ease;
-		transition: opacity 0.5s ease;
-	}
-
-	.overlay_active {
-		opacity: 0.4 !important;
-		z-index: 3 !important;
-	}
-
-	.marketplace_search {
-		top: 117px;
-		position: absolute;
-		left: 30px;
-		color: #f4751e;
-		font-size: 25px;
-		font-weight: bold;
-		width: 100%;
-		display: block;
-	}
-	
-	.additional_navbar_text {
-		top: -3px;
-	}
-
-	.additional_nav_input {
-		background-color: #ffffff;
-		left: 6px;
-		height: 38px;
-		width: 146px;
-		padding-right: 60px;
-		padding-left: 10px;
-		font-size: 20px;
-	}
-
-	.additional_nav_search {
-		height: 38px;
-		width: 100%;
-		cursor: pointer;
-	}
-
-	.additional_nav_search_icon {
-		width: 23px;
-		top: 8px;
-		left: 24px;
-		position: absolute;
-	}
-
-	.additional_navbar_search_button_overlay {
-		background-color: #ffffff;
-		left: -42px;
-		top: -6px;
-	}
-
-	.additional_nav_search_container {
-		height: 38px;
-		width: 60px;
-		left: -40px;
-		border-radius: 0px 2px 2px 0px;
-	}
-
-	.sidebar_pointer {
-		width: 40px;
-		margin-right: 20px;
-	}
-
-	/* CONTENT */
-
-	#content {
-		left: 21px;
-		width: 1200px;
-	}
 }
 
-@media (max-width: 1240px) {
-	/* TOPBAR */
-	.nav_input, .nav_input:focus {
-		background-color: transparent;
-		padding-left: 0px;
-		color: #fff;
-		font-size: 25px;
-		width: 100%;
-	}
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
 
-	.navbar_search_button_icon_resp1240 {
-		position: absolute;
-		display: block;
-		right: 15px;
-		top: 6px;
-		width: 30px;
-		cursor: pointer;
-	}
-
-	.navbar_search_button_container {
-		display: none;
-	}
-
-	.nav_search_container {
-		width: 31%;
-		border: 0px solid #fff;
-		border-bottom-width: 1px;
-		padding-right: 50px;
-	}
-
-	.additional_navbar_right {
-		width: 100%;
-		right: 0px;
-		padding-right: 50px;
-		font-size: 20px;
-		padding-bottom: 4px;
-	}
 }
 
-@media (max-width: 1080px) {
+/********************************************************************************************************************************************************* Galaxy S4 ***************/
 
-	/* TOPBAR */
-	.nav_input, .nav_input:focus {
-		background-color: transparent;
-		padding-left: 0px;
-		color: #fff;
-		font-size: 25px;
-		width: 100%;
-	}
+/* Portrait */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
 
-	.navbar_search_button_icon_resp {
-		position: absolute;
-		display: block;
-		right: 15px;
-		top: 6px;
-		width: 30px;
-		cursor: pointer;
-	}
+}
 
-	.navbar_search_button_container {
-		display: none;
-	}
+/* Landscape */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
 
-	.nav_search_container {
-		width: 31%;
-		border: 0px solid #fff;
-		border-bottom-width: 1px;
-		padding-right: 50px;
-		display: none;
-	}
-	.logo {
-		left: 50%;
-		margin-left: -136px;
-	}
-	
-	.navbar_search_button_icon_resp1080 {
-		display: block;
-		position: absolute;
-		right: 50px;
-		top: 21px;
-		height: 50px;
-		cursor: pointer;
-	}
-	/* BOTTOM BAR */
+}
 
-	.userpanel_container_resp1080 {
-		display: none;
-	}
 
-	.bottom_bar_wrapper {
-		display: block;
-		width: 100%;
-		position: fixed;
-		bottom: 0px;
-		height: 100px;
-		color: #706f6f;
-		z-index: 3;
-		-webkit-box-shadow: 0 0 10px 10px rgba(000,000,000,0.1);
-		box-shadow: 0 0 10px 10px rgba(000,000,000,0.1);
-	}
 
-	.userpanel_shopping_cart {
-		width: 50%;
-		height: 100%;
-		left: 0px;
-		right: 0px;
-		background-image: none;
-		background-color: #fff;
-	}
+/********************************************************************************************************************************************************* Galaxy S5 and HTC One ***/
 
-	.userpanel_login {
-		width: 50%;
-		height: 100%;
-		left: 0px;
-		right: 0px;
-		padding-top: 0px;
-		background-image: none;
-		background-color: #fff;
-	}
+/* Portrait */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
 
-	.userpanel_shopping_cart_icon1080 {
-		position: relative;
-		left: 50px;
-		top: 28px;
-		width: 50px;
-	}
+}
 
-	.userpanel_login_icon1080 {
-		 position: relative;
-		 left: 50px;
-		 top: 28px;
-		 width: 50px;
-	 }
+/* Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+
+}
+
+/********************************************************************************************************************************************************* iPhone 6 ****************/
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+
+}
+
+/********************************************************************************************************************************************************* iPhone 6+ ***************/
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+
+}
+
+/******************************************************************************* TABLETS */
+
+/********************************************************************************************************************************************************* iPad mini ***************/
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/********************************************************************************************************************************************************* iPad 1 and 2 ************/
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/********************************************************************************************************************************************************* iPad 3 and 4 ************/
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/********************************************************************************************************************************************************* LAPTOPS *****************/
+
+/********************************************************************************************************************************************************* Non-Retina Screens ******/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/********************************************************************************************************************************************************* Retina Screens **********/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+
 }
