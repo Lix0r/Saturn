@@ -3,6 +3,12 @@
 a {text-decoration: none;color: #fff;}
 body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 
+/* DISPLAY NONE COLLECTION */
+
+.size_3,.navbar_search_button_icon_resp1240,.navbar_search_button_icon_resp1080,.bottom_bar_wrapper,.marketplace_search  {display: none;}
+
+/* COLLECTION END */
+
 .black {
 	background-color: #20201f;
 	color: #fff;
@@ -103,13 +109,6 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 
 /* BASIC CLASSES END */
 
-/* RESPONSIVE CLASSES START */
-
-.size_3 {
-	display: none;
-}
-
-/* RESPONSIVE CLASSES END */
 
 /* TOP BAR STARTS */
 
@@ -185,10 +184,6 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	top: 15px;
 	left: 15px;
 	pointer-events: none;
-}
-
-.navbar_search_button_icon_resp1240, .navbar_search_button_icon_resp1080 {
-	display: none;
 }
 
 .nav_search_container {
@@ -339,6 +334,10 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 		top: -12px;
 	}
 
+	.special_corner_userpanel_login {
+		right: 0px;
+	}
+
 	/* BOTTOM LEFT */
 
 	.special_corner_bottom_left {
@@ -365,6 +364,22 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 		left: -13px;
 	}
 
+	/* TOP RIGHT */
+
+	.special_corner_top_right {
+		width: 25px;
+		height: 27px;
+		position: absolute;
+		content: "";
+		top: 18px;
+		background-color: inherit;
+	}
+	.special_corner_top_right_rotated {
+		top: 5px;
+		left: -12px;
+		background-color: inherit;
+	}
+
 /* ADDITIONAL BAR ENDS */
 
 /* USER PANEL STARTS */
@@ -375,10 +390,6 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	position: fixed;
 	z-index: 6;
 	overflow: visible;
-}
-
-.bottom_bar_wrapper {
-	display: none;
 }
 
 .userpanel_shopping_cart {
@@ -404,27 +415,18 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	right: 20px;
 }
 
+.userpanel_login_container {
+	position: relative;
+	height: 45px;
+	width: 255px;
+	cursor: pointer;
+}
+
 .userpanel_login {
 	position: relative;
 	padding-top: 20px;
 	height: 25px;
-	width: 255px;
-	background-image: url(../img/userpanel_login.png);
-	background-color: #fff;
-	background-repeat: no-repeat;
-	overflow: hidden;
-	-webkit-transition: all 0.25s ease;
-	-moz-transition: all 0.25s ease;
-	-ms-transition: all 0.25s ease;
-	-o-transition: all 0.25s ease;
-	transition: all 0.25s ease;
-}
-
-.userpanel_login:hover {
-	height: 197px;
-	overflow: visible;
-	-webkit-box-shadow: 0 5px 5px 0 rgba(000,000,000,0.4);
-	box-shadow: 0 5px 5px 0 rgba(000,000,000,0.4);
+	width: 237px;
 }
 
 .userpanel_login_icon {
@@ -443,20 +445,25 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	pointer-events: none;
 }
 
-.userpanel_login_expanded {
-	position: relative;
+.userpanel_login_panel {
+	position: absolute;
 	opacity: 0;
-	top: -39px;
-	padding: 39px 12px 38px 12px;
+	width: 255px;
+	background-color: #ffffff;
+	right: 0px;
+	top: 45px;
+	text-align: center;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-ms-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+	-webkit-box-shadow: 0 5px 5px 0 rgba(000,000,000,0.4);
+	box-shadow: 0 5px 5px 0 rgba(000,000,000,0.4);
 }
 
-.userpanel_login_expanded:hover {
-	opacity: 1;
-	-webkit-transition: all 0.75s ease;
-	-moz-transition: all 0.75s ease;
-	-ms-transition: all 0.75s ease;
-	-o-transition: all 0.75s ease;
-	transition: all 0.75s ease;
+.userpanel_login_panel_expanded {
+	opacity: 1 !important;
 }
 
 .login_input {
@@ -479,22 +486,26 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 .userpanel_register_button {
 	background-image: url(../img/userpanel_register_button.png);
 	width: 135px;
-	padding: 5px 9px 4px 13px;
+	padding: 6px 0 7px 0;
 	height: 12px;
 	font-size: 14px;
 	position: relative;
-	top: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	left: 15px;
 }
 
 .userpanel_login_button {
 	background-image: url(../img/userpanel_login_button.png);
-	width: 135px;
-	padding: 5px 13px 4px 13px;
+	width: 60px;
+	padding: 6px 0 7px 0;
 	height: 12px;
 	font-size: 14px;
-	position: relative;
-	top: 15px;
-	left: 50px;
+	position: absolute;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	right: 13px;
+	top: 122px;
 }
 
 /* USER PANEL ENDS */
@@ -589,10 +600,6 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 	position: absolute;
 	left: 346px;
 	top: -1px;
-}
-
-.marketplace_search {
-	display: none;
 }
 
 /* SIDE BAR ENDS */
@@ -933,7 +940,7 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 		background-color: #fff;
 	}
 
-	.userpanel_login, .userpanel_login:hover {
+	.userpanel_login {
 		width: 50%;
 		height: 100%;
 		left: 0px;

@@ -38,15 +38,21 @@
 	<!-- USER PANEL -->
 
 	<div class="userpanel_container align_right userpanel_container_resp1080">
-		<div class="userpanel_login align_left float_right">
-			<img src="img/avatar.svg" class="userpanel_login_icon float_left" alt="Anmelden">
-			<span class="userpanel_login_label">Anmelden</span><br />
-			<div class="userpanel_login_expanded"><br />
-				<input type="text" class="login_input" placeholder="E-Mail-Adresse">
-				<input type="password" class="login_input" placeholder="Password">
-				<a href="#" class="userpanel_register_button">Neu registrieren</a>
-				<a href="#" class="userpanel_login_button">Login</a>
+		<div class="userpanel_login_container no_overflow float_right">
+			<div class="userpanel_login orange hover_for_orange align_left float_left">
+				<img src="img/avatar.svg" class="userpanel_login_icon float_left" alt="Anmelden">
+				<span class="userpanel_login_label">Anmelden</span><br />
 			</div>
+			<div class="special_corner special_corner_userpanel_login">
+				<div class="special_corner_top_right"><!-- EMPTY --></div>
+				<div class="special_corner_rotated special_corner_top_right_rotated"><!-- EMPTY --></div>
+			</div>
+		</div>
+		<div class="userpanel_login_panel"><br />
+			<input type="text" class="login_input" placeholder="E-Mail-Adresse">
+			<input type="password" class="login_input" placeholder="Password">
+			<a href="#" class="userpanel_register_button float_left align_center">Neu registrieren</a>
+			<a href="#" class="userpanel_login_button float_left align_center">Login</a>
 		</div>
 		<div class="userpanel_shopping_cart align_right float_right">
 			<img src="img/shopping_cart.svg" class="userpanel_shopping_cart_icon float_right" alt="Einkaufswagen">
@@ -75,7 +81,7 @@
 			<button type="button" class="additional_nav_search black hover_for_black float_left"><img src="img/search.svg" alt="Suchen"></button>
 			<div class="additional_navbar_search_button_overlay white"><!-- EMPTY --></div>
 		</div>
-		<div class="position_relative float_right special">
+		<div class="position_relative float_right">
 			<div class="special_corner special_corner_additional_navbar_adj_right">
 				<div class="special_corner_bottom_right orange"><!-- EMPTY --></div>
 				<div class="special_corner_rotated special_corner_bottom_right_rotated orange"><!-- EMPTY --></div>
@@ -215,6 +221,7 @@
 	</div>
 
 	<script>
+		<!-- SIDEBAR JQUERY STUFF -->
 		$( '#sidebar_button' ).click(function() {
 			$( '#sidebar' ).toggleClass( 'sidebar_active' );
 			$( '#sidebar_overlay').toggleClass( 'overlay_active')
@@ -227,6 +234,11 @@
 		$( '.sidebar_tab' ).click(function() {
 			$( '#sidebar' ).removeClass( 'sidebar_active' );
 			$( '#sidebar_overlay' ).removeClass( 'overlay_active' )
+		})
+
+		<!-- USERPANEL EXPAND -->
+		$( '.userpanel_login_container' ).click(function() {
+			$( '.userpanel_login_panel' ).toggleClass( 'userpanel_login_panel_expanded' );
 		})
 	</script>
 
