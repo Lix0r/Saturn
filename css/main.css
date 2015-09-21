@@ -906,6 +906,7 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 		height: 50px;
 		cursor: pointer;
 	}
+
 	/* BOTTOM BAR */
 
 	.userpanel_container_resp1080 {
@@ -941,6 +942,8 @@ body {background-image: url(../img/background.jpg);background-repeat: repeat;}
 		padding-top: 0px;
 		background-image: none;
 		background-color: #fff;
+		-webkit-box-shadow: 0 0px 0px 0 rgba(000,000,000,0);
+		box-shadow: 0 0px 0px 0 rgba(000,000,000,0);
 	}
 
 	.userpanel_shopping_cart_icon1080 {
