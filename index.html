@@ -5,7 +5,6 @@
 	<title>Saturn</title>
 	<link rel="stylesheet" title="main" type="text/css" href="css/webfonts.css">
 	<link rel="stylesheet" title="main" type="text/css" href="css/main.css">
-	<script src="scripts/jquery.js"></script>
 </head>
 <body>
 
@@ -42,7 +41,7 @@
 			<img src="img/avatar.svg" class="userpanel_login_icon float_left" alt="Anmelden">
 			<span class="userpanel_login_label">Anmelden</span><br />
 			<div class="userpanel_login_expanded"><br />
-				<input type="text" class="login_input" placeholder="E-Mail-Adresse">
+				<input type="email" class="login_input" placeholder="E-Mail-Adresse">
 				<input type="password" class="login_input" placeholder="Password">
 				<a href="#" class="userpanel_register_button">Neu registrieren</a>
 				<a href="#" class="userpanel_login_button">Login</a>
@@ -213,7 +212,8 @@
 		<img src="img/slider.png" alt="Slider" class="float_left slider">
 		<img src="img/prospekt.png" alt="Prospekt" class="prospekt">
 	</div>
-
+	
+	<script src="scripts/jquery.min.js"></script>
 	<script>
 		$( '#sidebar_button' ).click(function() {
 			$( '#sidebar' ).toggleClass( 'sidebar_active' );
